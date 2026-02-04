@@ -9,19 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
             text-align: center;
+            color: #ffffff;
+            background: linear-gradient(135deg, #c9d6ff, #5f72bd);
             overflow: hidden;
-            background: linear-gradient(135deg, #74ebd5, #9face6);
         }
 
-        /* Sparkle / sinar layer */
+        /* Sparkle twinkle layer */
         body::before,
         body::after {
             content: "";
@@ -29,57 +35,54 @@
             width: 200%;
             height: 200%;
             background-image:
-                radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), transparent),
-                radial-gradient(1.5px 1.5px at 60% 20%, rgba(255,255,255,0.6), transparent),
-                radial-gradient(2px 2px at 80% 70%, rgba(255,255,255,0.7), transparent),
-                radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.5), transparent);
-            animation: sparkleMove 14s linear infinite;
+                radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1.5px 1.5px at 60% 20%, rgba(255,255,255,0.7), transparent),
+                radial-gradient(2px 2px at 80% 70%, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.6), transparent);
+            animation: twinkle 6s ease-in-out infinite alternate;
         }
 
         body::after {
-            animation-duration: 20s;
+            animation-duration: 9s;
             opacity: 0.6;
         }
 
-        @keyframes sparkleMove {
+        @keyframes twinkle {
             from {
-                transform: translateY(0);
+                opacity: 0.3;
             }
             to {
-                transform: translateY(-120px);
+                opacity: 1;
             }
         }
 
         .container {
             position: relative;
             z-index: 2;
-            max-width: 800px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.88);
-            border-radius: 18px;
-            animation: fadeIn 1.8s ease-in-out;
+            max-width: 900px;
+            padding: 20px;
+            animation: fadeIn 1.6s ease-out;
         }
 
         h1 {
             font-size: 50px;
-            margin: 0;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             font-weight: 700;
-            color: #1f3c88;
+            color: #ffffff;
         }
 
         p {
+            margin-top: 26px;
             font-size: 18px;
-            margin-top: 24px;
-            line-height: 1.8;
-            font-weight: 400;
-            color: #333;
+            line-height: 1.9;
+            font-weight: 300;
+            opacity: 0.95;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(25px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -90,15 +93,16 @@
         /* Responsive */
         @media (max-width: 600px) {
             h1 {
-                font-size: 34px;
+                font-size: 32px;
             }
-            .container {
-                padding: 28px;
+            p {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>COMING SOON DIGITAL LIBRARY</h1>
         <p>
@@ -107,5 +111,6 @@
             Terima kasih sudah berkunjung, sampai jumpa dalam waktu dekat!
         </p>
     </div>
+
 </body>
 </html>
