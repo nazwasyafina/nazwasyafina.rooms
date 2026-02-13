@@ -1,111 +1,272 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Digital Library</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nazwa Syafina Digital Library</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            color: #1e1e2f;
-            background: linear-gradient(
-                135deg,
-                #a1c4fd,
-                #c2e9fb,
-                #fbc2eb
-            );
-            overflow: hidden;
-            position: relative;
-        }
+body{
+  background:linear-gradient(135deg,#fffaf6,#f3e5d8,#e7d3c5);
+  color:#4b3621;
+}
 
-        /* ✨ Sparkle layer */
-        body::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                radial-gradient(2px 2px at 15% 20%, rgba(255,255,255,0.9), transparent),
-                radial-gradient(3px 3px at 40% 60%, rgba(255,255,255,0.8), transparent),
-                radial-gradient(2px 2px at 70% 30%, rgba(255,255,255,0.7), transparent),
-                radial-gradient(1.5px 1.5px at 85% 75%, rgba(255,255,255,0.9), transparent),
-                radial-gradient(2.5px 2.5px at 55% 15%, rgba(255,255,255,0.6), transparent);
-            animation: sparkle 4s ease-in-out infinite alternate;
-        }
+/* ===== NAVBAR ===== */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:#8b6b4f;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-        @keyframes sparkle {
-            from { opacity: 0.4; }
-            to   { opacity: 1; }
-        }
+nav strong{ color:#ffffff; }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            padding: 20px;
-            animation: fadeUp 1.2s ease-out;
-        }
+nav a{
+  text-decoration:none;
+  color:#ffffff;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
+}
 
-        h1 {
-            font-size: 45px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
+nav a:hover{ color:#f8f1e4; }
 
-        p {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.8;
-            color: #2a2a3d;
-        }
+/* ===== GARIS PEMBATAS ===== */
+.section-divider{
+  width:90%;
+  height:2px;
+  margin:0 auto;
+  background:linear-gradient(to right, 
+    transparent, 
+    #b08968, 
+    #8b6b4f, 
+    #b08968, 
+    transparent);
+  border-radius:10px;
+}
 
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* ===== SECTION UMUM ===== */
+.section{
+  padding:100px 60px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 34px;
-            }
-            p {
-                font-size: 16px;
-            }
-        }
-    </style>
+/* ===== SECTION 1 (UPDATED SHINING EFFECT COKLAT) ===== */
+.intro-wrapper{
+  text-align:center;
+  max-width:1000px;
+  position:relative;
+}
+
+.intro-wrapper::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle, rgba(176,137,104,0.5) 0%, rgba(139,107,79,0.0) 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  filter:blur(80px);
+  z-index:-1;
+  animation: shining 4s ease-in-out infinite;
+}
+
+@keyframes shining{
+  0%,100%{transform:translate(-50%,-50%) scale(1);}
+  50%{transform:translate(-50%,-50%) scale(1.2);}
+}
+
+.intro-wrapper h1{
+  font-size:42px;
+  color:#8b6b4f;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.intro-box{
+  max-width:850px;
+  background:#8b6b4f;
+  padding:60px;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+
+.intro-box p{
+  line-height:1.9;
+  color:#fdf7f2;
+  font-weight:300;
+  font-size:16px;
+}
+
+/* ===== SECTION 2 ===== */
+.profile-container{
+  text-align:center;
+  max-width:900px;
+}
+
+.profile-container h3{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+.profile-img{
+  width:230px;
+  height:230px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid #ffffff;
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+  margin-bottom:15px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.profile-container h2{
+  font-size:22px;
+  font-weight:600;
+  margin-top:5px;
+  margin-bottom:20px;
+}
+
+.profile-container span{
+  display:block;
+  max-width:800px;
+  margin:0 auto 30px auto;
+  font-size:15px;
+  line-height:1.7;
+}
+
+.button-wrapper{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.link-btn{
+  padding:12px 28px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#8b6b4f,#b08968);
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.link-btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== SECTION 3 ===== */
+.youtube-section{
+  text-align:center;
+}
+
+.youtube-section h3{
+  font-size:32px;
+}
+
+.youtube-section iframe{
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+  margin-top:20px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#8b6b4f;
+  color:#ffffff;
+  font-size:13px;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>COMING SOON DIGITAL LIBRARY</h1>
-        <p>
-            Website ini sedang dikembangkan 🚀<br>
-            Beberapa fitur dan konten masih dalam proses penyusunan agar nantinya dapat digunakan secara optimal. 
-            Terima kasih sudah berkunjung, sampai jumpa dalam waktu dekat!
-            
-        </p>
+<nav>
+  <div><strong>Nazwa Syafina Digital Library</strong></div>
+  <div>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Media</a>
+  </div>
+</nav>
+
+<!-- ===== SECTION 1 ===== -->
+<section class="section">
+  <div class="intro-wrapper">
+
+    <h1>Nazwa Syafina Digital Library</h1>
+
+    <div class="intro-box">
+      <p>
+        Saya membangun Nazwa Syafina Digital Library sebagai ruang belajar pribadi 
+        sekaligus media berbagi pengetahuan yang merepresentasikan diri saya 
+        sebagai mahasiswi Program Studi Perpustakaan dan Sains Informasi. 
+        Website ini tidak hanya berfungsi sebagai profil personal, tetapi juga sebagai bentuk personal branding dan refleksi perjalanan saya dalam dunia literasi, yang memadukan semangat membaca, menulis, serta visi untuk mengintegrasikan ilmu perpustakaan dengan inovasi dan perkembangan teknologi digital.
+      </p>
     </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== SECTION 2 ===== -->
+<section class="section">
+  <div class="profile-container">
+    <h3>Tentang Saya</h3>
+    <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
+    <h2>Nazwa Syafina</h2>
+    <span>
+      Mahasiswi Program Studi Perpustakaan dan Sains Informasi yang memiliki minat dalam literasi digital, pengelolaan informasi, serta pengembangan inovasi layanan perpustakaan berbasis teknologi. Saya tertarik pada bagaimana informasi dapat dikelola secara sistematis dan modern agar lebih mudah diakses, relevan, serta bermanfaat bagi masyarakat luas dalam era transformasi digital saat ini.
+    </span>
+    <div class="button-wrapper">
+      <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">Sosial Media</a>
+      <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk" target="_blank" class="link-btn">Curriculum Vitae</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== SECTION 3 ===== -->
+<section class="section youtube-section">
+  <div>
+    <h3>Video Dokumentasi</h3>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/4w13jP-cshM"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+© 2026 Nazwa Syafina Digital Library
+</footer>
 
 </body>
 </html>
