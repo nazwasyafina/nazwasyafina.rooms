@@ -22,17 +22,37 @@ body{
 
 /* ===== NAVBAR ===== */
 nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
   display:flex;
   justify-content:space-between;
-  padding:20px 60px;
-  background:#ffffff;
-  position:sticky;
-  top:0;
+  align-items:center;
+  padding:0 50px;
+  height:70px; /* tinggi tetap */
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   z-index:1000;
-  border-bottom:1px solid #e5e5e5;
 }
 
-nav strong{ color:#4b3621; }
+nav strong{ 
+  color:#4b3621; 
+  font-size:18px;
+}
+
+/* Logo Area */
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:70px;
+}
+
+.logo-img{
+  height:80px;
+  width:auto;
+  object-fit:contain;
+}
 
 nav a{
   text-decoration:none;
@@ -63,6 +83,7 @@ nav a:hover{ color:#8b6b4f; }
   background-position:center;
   background-attachment:fixed;
   color:white;
+  padding-top:200px;
 }
 
 .intro-wrapper{
@@ -74,7 +95,7 @@ nav a:hover{ color:#8b6b4f; }
 .intro-wrapper h1{
   font-size:44px;
   font-weight:700;
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
 
 .intro-wrapper p{
@@ -301,7 +322,10 @@ footer{
 <body>
 
 <nav>
-  <div><strong>Nazwa’s Library Corner</strong></div>
+ <div class="logo-area">
+  <img src="logo.PNG" alt="Logo" class="logo-img">
+  <strong>Nazwa’s Library Corner</strong>
+</div>
   <div>
     <a href="#beranda">Beranda</a>
     <a href="#profil">Profil</a>
