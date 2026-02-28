@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet the Founder | Nazwa’s Library Corner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent 40%),
+    linear-gradient(180deg,#8b6b4f 0%, #c8a98f 50%, #f2e5dc 100%);
+  color:#4b3621;
+  min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 60px;
+  height:70px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+
+nav strong{
+  font-size:18px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#4b3621;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#8b6b4f;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:160px 20px 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  max-width:1100px;
+  width:100%;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(15px);
+  padding:60px;
+  border-radius:25px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+  animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.container h1{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:15px;
+}
+
+.decor-line{
+  width:80px;
+  height:4px;
+  background:linear-gradient(90deg,#8b6b4f,#b08968);
+  margin:0 auto 50px;
+  border-radius:5px;
+}
+
+/* ===== CONTENT ===== */
+.content{
+  display:flex;
+  gap:70px;
+  align-items:flex-start;
+}
+
+.left{
+  text-align:center;
+}
+
+.left img{
+  width:240px;
+  height:240px;
+  object-fit:cover;
+  border-radius:50%;
+  border:8px solid #ffffff;
+  box-shadow:0 25px 50px rgba(0,0,0,0.2);
+  margin-bottom:20px;
+}
+
+.left h2{
+  font-size:22px;
+  font-weight:600;
+}
+
+.right{
+  flex:1;
+}
+
+.right p{
+  margin-bottom:22px;
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* QUOTE BOX */
+.quote-box{
+  background:linear-gradient(135deg,#8b6b4f,#b08968);
+  color:white;
+  padding:25px 30px;
+  border-radius:18px;
+  font-style:italic;
+  margin:30px 0;
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+.button-wrapper{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.link-btn{
+  padding:13px 30px;
+  border-radius:30px;
+  background:#4b3621;
+  color:white;
+  text-decoration:none;
+  transition:0.3s ease;
+  font-weight:500;
+}
+
+.link-btn:hover{
+  background:#8b6b4f;
+  transform:translateY(-3px);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#4b3621;
+  color:white;
+  font-size:13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+  nav{
+    padding:0 20px;
+  }
+
+  nav a{
+    margin-left:15px;
+    font-size:14px;
+  }
+
+  .container{
+    padding:40px 25px;
+  }
+
+  .content{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .right{
+    text-align:left;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>Nazwa’s Library Corner</strong>
+  <div>
+    <a href="index.html">Beranda</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <h1>Meet the Founder</h1>
+    <div class="decor-line"></div>
+
+    <div class="content">
+      <div class="left">
+        <img src="foto.jpeg" alt="Foto Nazwa">
+        <h2>Nazwa Syafina</h2>
+      </div>
+
+      <div class="right">
+        <p>
+          <strong>Nazwa’s Library Corner</strong> dikembangkan oleh Nazwa Syafina, mahasiswi Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara yang memiliki minat pada bidang literasi, pengelolaan informasi, dan pengembangan web.
+        </p>
+
+        <p>
+          Website ini dibuat sebagai ruang digital untuk menyimpan, membagikan, dan mengembangkan berbagai ide serta pembelajaran seputar dunia perpustakaan. Selain menjadi media personal branding, platform ini juga menjadi tempat bagi Nazwa untuk mengekspresikan minatnya dalam menggabungkan ilmu perpustakaan dengan teknologi secara sederhana dan mudah dipahami.
+        </p>
+
+        <div class="quote-box">
+          Nazwa meyakini bahwa perpustakaan umum di era digital tidak lagi sekadar berfungsi sebagai tempat penyimpanan koleksi, melainkan sebagai ruang inklusif yang mampu menjembatani kebutuhan informasi masyarakat secara luas serta mendukung proses pembelajaran yang berkelanjutan.
+        </div>
+
+        <div class="button-wrapper">
+          <a href="https://www.instagram.com/nazwasyafinaa" target="_blank" class="link-btn">Social Media</a>
+          <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drive_link" target="_blank" class="link-btn">Curriculum Vitae</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Nazwa’s Library Corner
+</footer>
+
+</body>
+</html>
