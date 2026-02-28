@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multimedia - Nazwa’s Library Corner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  color:#4b3621;
+  padding-top:100px;
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(139,107,79,0.25) 0%, transparent 45%),
+              linear-gradient(135deg,#f3e9e1,#d7c2b0,#c2a891);
+  background-attachment: fixed;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 50px;
+  height:70px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.logo-img{
+  height:80px;
+}
+
+nav strong{
+  font-size:18px;
+  color:#4b3621;
+}
+
+nav a{
+  text-decoration:none;
+  color:#4b3621;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#8b6b4f;
+}
+
+/* ===== CONTENT FULL SCREEN ===== */
+
+.multimedia-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+  padding: 60px 20px 100px; /* padding: atas 100px, kanan/kiri 20px, bawah 100px */
+}
+.multimedia-container h2{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#5c3d2e;
+}
+
+.multimedia-desc{
+  max-width:700px;
+  margin:0 auto 30px;
+  font-size:14px;
+  line-height:1.6;
+  color:#6b4f3a;
+}
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.video-card{
+  background:#ffffff;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  text-align:left;
+}
+
+.video-icon{
+  font-size:22px;
+  color:#8b6b4f;
+  margin-bottom:8px;
+}
+
+.video-card h3{
+  font-size:14px;
+  margin-bottom:6px;
+  color:#5c3d2e;
+}
+
+.video-card p{
+  font-size:12px;
+  margin-bottom:8px;
+  color:#6b4f3a;
+  line-height:1.5;
+}
+
+.video-card iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:10px;
+  border:none;
+}
+
+/* ===== PRE FOOTER ===== */
+
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
+}
+
+.pre-col {
+  flex:1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+}
+
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#8b6b4f;
+  color:#ffffff;
+  font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo-area">
+    <img src="logo.PNG" alt="Logo" class="logo-img">
+    <strong>Nazwa’s Library Corner</strong>
+  </div>
+  <div>
+    <a href="index.html#beranda">Beranda</a>
+  </div>
+</nav>
+
+<div class="multimedia-container">
+
+  <h2>Multimedia Edukasi Perpustakaan</h2>
+
+  <p class="multimedia-desc">
+    Temukan kumpulan video edukatif yang rutin diperbarui. Mulai dari tips literasi hingga insight perpustakaan digital, video-video ini disajikan untuk memberikan inspirasi dan informasi terkini bagi pengunjung.
+  </p>
+
+  <div class="video-grid">
+
+    <div class="video-card">
+      <div class="video-icon"><i class="fas fa-book-open"></i></div>
+      <h3>PMM Digitalisasi Layanan Perpustakaan</h3>
+      <p>Intip inovasi digital di perpustakaan sekolah yang memudahkan akses informasi bagi siswa.</p>
+      <iframe src="https://www.youtube.com/embed/4w13jP-cshM" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-card">
+      <div class="video-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <h3>Webinar Transformasi Digital</h3>
+      <p>Pelajari bagaimana knowledge management dapat mendorong budaya literasi di era digital.</p>
+      <iframe src="https://www.youtube.com/embed/ulvrXVMQK4A" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-card">
+      <div class="video-icon"><i class="fas fa-microphone-alt"></i></div>
+      <h3>Podcast Peran Pustakawan Modern</h3>
+      <p>Perkembangan peran pustakawan di era teknologi informasi.</p>
+      <iframe src="https://www.youtube.com/embed/K7-g4rZ7kjo" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+</div>
+
+<section class="pre-footer">
+  <div class="pre-footer-container">
+    
+    <div class="pre-col">
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat: 08.00 - 16.00</p>
+      <p>Sabtu: 09.00 - 14.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
+
+    <div class="pre-col">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
+      <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
+    </div>
+
+    <div class="pre-col">
+      <h4>Sosial Media</h4>
+      <p>Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+© 2026 Nazwa’s Library Corner
+</footer>
+
+</body>
+</html>
