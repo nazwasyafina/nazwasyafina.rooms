@@ -63,6 +63,19 @@ nav a{
 }
 
 nav a:hover{ color:#8b6b4f; }
+  #authBtn{
+  background:#8b6b4f;
+  color:#ffffff !important;
+  padding:8px 22px;
+  border-radius:30px;
+  margin-left:30px;
+  transition:0.3s;
+}
+
+#authBtn:hover{
+  background:#b08968;
+  color:#ffffff;
+}
 
 /* ===== SECTION UMUM ===== */
 .section{
@@ -146,7 +159,7 @@ nav a:hover{ color:#8b6b4f; }
     #f2e5dc 100%
   );
 }
-
+  
 /* ===== SECTION 3 ===== */
 #media{
   background:linear-gradient(
@@ -250,7 +263,105 @@ nav a:hover{ color:#8b6b4f; }
   box-shadow:0 15px 35px rgba(0,0,0,0.1);
   margin-top:20px;
 }
+.library-profile {
+  background: #f5eee6;
+  padding: 90px 10%;
+  position: relative;
+  overflow: hidden;
+}
 
+.profile-container {
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2f2f2f;
+  text-align: center;
+}
+
+.profile-icon {
+  color: #8b6b4f;
+}
+
+.profile-left p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-align: justify;
+  color: #2f2f2f;
+}
+
+.profile-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.vision-box,
+.mission-box {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  margin-top: 30px;
+}
+
+.vision-box:hover,
+.mission-box:hover {
+  transform: translateY(-6px);
+}
+
+.vision-box h3,
+.mission-box h3 {
+  margin-bottom: 15px;
+  color: #cd811c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-box ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Decorative soft background shapes */
+.library-profile::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: #e6d3c3;
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  opacity: 0.35;
+}
+
+.library-profile::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: #d2b8a3;
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+  opacity: 0.3;
+}
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
@@ -316,7 +427,198 @@ footer{
   }
 
 }
+  /* ===== PRE FOOTER ===== */
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 80px;
+}
+
+.pre-col {
+  flex: 1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.pre-footer p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.8;
+}
+.pre-footer i {
+  font-size: 15px;
+  margin-top: 3px;
+  color: #ffffff;
+}
+
+/* DESKRIPSI SOSIAL MEDIA */
+.pre-description {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.7;
+  max-width: 260px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* ICON SOSIAL MEDIA */
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #f4d03f;
+  color: #8b6b4f;
+  border-color: #f4d03f;
+}
+
+/* PEMBATAS KE FOOTER */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pre-footer {
+    padding: 50px 20px 40px;
+  }
+
+  .pre-footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+  /* ===== PREMIUM EDITORIAL STYLE PROFIL ===== */
+
+/* Tambah layering background lebih hidup */
+#profil{
+  position:relative;
+  overflow:hidden;
+}
+
+#profil::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle, rgba(139,107,79,0.15) 0%, transparent 70%);
+  top:-120px;
+  right:-120px;
+  z-index:0;
+}
+
+#profil::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(176,137,104,0.18) 0%, transparent 70%);
+  bottom:-100px;
+  left:-100px;
+  z-index:0;
+}
+
+/* Pastikan konten di atas background */
+.profile-container{
+  position:relative;
+  z-index:2;
+}
+
+/* Turunkan kanan + efek editorial */
+.profile-right{
+  margin-top:90px;
+  position:relative;
+}
+
+/* Overlap effect */
+.mission-box{
+  margin-top:-40px;
+}
+
+/* Vision box */
+.vision-box{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(6px);
+  border-left:6px solid #8b6b4f;
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Mission box */
+.mission-box{
+  background:rgba(255,255,255,0.9);
+  border-left:6px solid #b08968;
+  box-shadow:0 25px 50px rgba(0,0,0,0.1);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Decorative watermark icon */
+.vision-box::after{
+  content:"\f5da";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  position:absolute;
+  right:25px;
+  bottom:15px;
+  font-size:70px;
+  color:rgba(139,107,79,0.07);
+}
+
+.mission-box::after{
+  content:"\f19d";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  position:absolute;
+  right:25px;
+  bottom:15px;
+  font-size:70px;
+  color:rgba(176,137,104,0.08);
+}
+
+/* Hover lebih premium */
+.vision-box:hover,
+.mission-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,0.12);
+}
+  
 </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -330,15 +632,16 @@ footer{
     <a href="#beranda">Beranda</a>
     <a href="#profil">Profil</a>
     <a href="#media">Media</a>
-    <a href="login.html" id="authBtn">Login</a>
+    <a href="founder.html">Founder</a>
     <a href="contact.html" target="_blank">Contact Us</a>
+    <a href="login.html" id="authBtn" target="_blank">Login</a>
   </div>
 </nav>
 
 <section class="section" id="beranda">
   <div class="intro-wrapper">
     <h1>Welcome to Nazwa’s Library Corner</h1>
-    <p>A personal digital space where knowledge, literacy, and ideas grow together</p>
+    <p>A public library space where knowledge and ideas grow together</p>
     <div class="search-box">
       <input type="text" placeholder="Search books, articles, ideas...">
       <button>Search</button>
@@ -346,39 +649,52 @@ footer{
   </div>
 </section>
 
-<section class="section" id="profil">
+<section class="section library-profile" id="profil">
   <div class="profile-container">
-    <h3>The Story Behind the Library</h3>
 
-    <div class="profile-content">
-      <div class="profile-left">
-        <img src="foto.jpeg" alt="Foto Nazwa" class="profile-img">
-        <h2>Nazwa Syafina</h2>
+    <div class="profile-left">
+      <h2>
+        Profil Perpustakaan
+      </h2>
+
+      <p>
+        <strong>Nazwa’s Library Corner</strong> merupakan perpustakaan umum yang menghadirkan layanan literasi dan informasi secara terpadu melalui ruang digital. Perpustakaan ini dirancang untuk menyediakan akses informasi yang inklusif, mudah dijangkau, dan relevan dengan kebutuhan masyarakat di era digital, sekaligus menjadi ruang belajar yang terbuka bagi berbagai kalangan.
+      </p>
+      
+       <p>
+       Perpustakaan ini berkomitmen melayani berbagai lapisan masyarakat tanpa membedakan usia, latar belakang pendidikan, maupun profesi. Beragam layanan dan fasilitas disediakan untuk mendukung kegiatan belajar, pengembangan diri, serta penguatan literasi masyarakat secara luas.
+      </p>
+
+      <p>
+       Dengan memadukan nilai-nilai dasar ilmu perpustakaan dan pemanfaatan teknologi, <strong>Nazwa’s Library Corner</strong> hadir sebagai pusat akses pengetahuan yang mendorong pembelajaran berkelanjutan. Perpustakaan ini berperan dalam menumbuhkan budaya literasi, meningkatkan kesadaran akan pentingnya informasi yang berkualitas, serta membangun ekosistem belajar yang adaptif terhadap perkembangan zaman.
+      </p>
+    </div>
+
+    <div class="profile-right">
+      <div class="vision-box">
+        <h3>
+          <i class="fa-solid fa-eye"></i> Visi
+        </h3>
+        <p>
+          Menjadi ruang literasi yang inspiratif, inklusif, dan adaptif dalam mendukung pengembangan pengetahuan serta budaya membaca masyarakat.
+        </p>
       </div>
 
-      <div class="profile-right">
-        <p>
-          Nazwa’s Library Corner merupakan platform perpustakaan digital yang dikembangkan oleh Nazwa Syafina, mahasiswi Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara yang memiliki minat pada bidang literasi, pengelolaan informasi, dan pengembangan web.
-        </p>
-
-        <p>
-          Website ini dibuat sebagai ruang digital untuk menyimpan, membagikan, dan mengembangkan berbagai ide serta pembelajaran seputar dunia perpustakaan. Selain menjadi media personal branding, platform ini juga menjadi tempat bagi Nazwa untuk mengekspresikan minatnya dalam menggabungkan ilmu perpustakaan dengan teknologi secara sederhana dan mudah dipahami.
-        </p>
-
-        <p>
-          Melalui Nazwa’s Library Corner, diharapkan nantinya dapat tercipta ruang yang nyaman dan inspiratif, yang tidak hanya menampilkan informasi, tetapi juga memberi semangat bagi pengunjung untuk terus belajar dan berkembang di era digital.
-        </p>
-
-        <div class="button-wrapper">
-          <a href="https://www.instagram.com/nazwasyafinaa?igsh=MXc4ODBvM2FjbmdyNg==" target="_blank" class="link-btn">Sosial Media</a>
-          <a href="https://drive.google.com/file/d/1E1AFPYv8V6gKwerEoftuDWzuRU17_ynN/view?usp=drivesdk" target="_blank" class="link-btn">Curriculum Vitae</a>
-        </div>
-
+      <div class="mission-box">
+        <h3>
+          <i class="fa-solid fa-bullseye"></i> Misi
+        </h3>
+        <ul>
+          <li>Menyediakan akses informasi yang relevan dan berkualitas.</li>
+          <li>Mengembangkan layanan perpustakaan yang adaptif terhadap perkembangan teknologi dan kebutuhan pengguna.</li>
+          <li>Mendorong budaya literasi dan pembelajaran di tengah masyarakat.</li>
+        </ul>
       </div>
     </div>
+
   </div>
 </section>
-
+      
 <section class="section youtube-section" id="media">
   <div>
     <h3>Video Dokumentasi</h3>
@@ -391,6 +707,43 @@ footer{
 </section>
 
 <footer>
+  <section class="pre-footer">
+  <div class="pre-footer-container">
+    
+    <!-- JAM OPERASIONAL -->
+   <div class="pre-col">
+  <h4>Jam Operasional</h4>
+  <p>Senin - Jumat: 08.00 - 16.00</p>
+  <p>Sabtu: 09.00 - 14.00</p>
+  <p>Minggu & Libur Nasional: Tutup</p>
+</div>
+
+    <!-- KONTAK (TENGAH) -->
+    <div class="pre-col center-col">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
+      <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
+    </div>
+
+    <!-- SOSIAL MEDIA -->
+    <div class="pre-col">
+      <h4>Sosial Media</h4>
+      <p class="pre-description">
+        Ikuti Nazwa’s Library Corner untuk update literasi,
+        pengelolaan informasi, dan pengembangan
+        perpustakaan digital.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
 © 2026 Nazwa’s Library Corner 
 </footer>
 
