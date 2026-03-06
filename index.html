@@ -250,18 +250,28 @@ nav a:hover{ color:#8b6b4f; }
   transform:scale(1.05);
 }
 
-.youtube-section{
-  text-align:center;
+.koleksi-section {
+  padding: 80px 10%;
+  background-color: #f9f6f2;
+  text-align: center;
 }
 
-.youtube-section h3{
-  font-size:32px;
+.koleksi-section h2 {
+  font-size: 32px;
+  color: #cd811c;
+  margin-bottom: 15px;
 }
 
-.youtube-section iframe{
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
-  margin-top:20px;
+.section-desc {
+  color: #2f2f2f;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+.video-wrapper {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .library-profile {
   background: #f5eee6;
@@ -362,13 +372,110 @@ nav a:hover{ color:#8b6b4f; }
   left: -80px;
   opacity: 0.3;
 }
-/* ===== FOOTER ===== */
+  /* ===== SECTION KOLEKSI PREVIEW ===== */
+
+.koleksi-preview {
+  padding: 100px 20px;
+  text-align: center;
+  background: #f9f6f2;
+}
+
+.koleksi-preview h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #5c3d2e;
+}
+
+.koleksi-desc {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.koleksi-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #8b6b4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.koleksi-btn:hover {
+  background: #6f523d;
+}
+/* ===== PRE FOOTER ===== */
+
+.pre-footer {
+  background: #8b6b4f;
+  color: #ffffff;
+  padding: 70px 80px 50px;
+}
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 60px;
+}
+
+.pre-col {
+  flex:1;
+}
+
+.pre-footer h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4d03f;
+}
+
+.pre-footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS SEJAJAR */
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f4d03f;
+  color:#8b6b4f;
+}
+
+/* FOOTER */
+
 footer{
   text-align:center;
   padding:20px;
   background:#8b6b4f;
   color:#ffffff;
   font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.3);
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
@@ -420,96 +527,7 @@ footer{
   .profile-right{
     text-align:left;
   }
-
-  .youtube-section iframe{
-    width:100%;
-    height:220px;
-  }
-
 }
-  /* ===== PRE FOOTER ===== */
-.pre-footer {
-  background: #8b6b4f;
-  color: #ffffff;
-  padding: 70px 80px 50px;
-}
-
-.pre-footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1100px;
-  margin: auto;
-  gap: 80px;
-}
-
-.pre-col {
-  flex: 1;
-}
-
-.pre-footer h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #f4d03f;
-  letter-spacing: 0.5px;
-  text-align: left;
-}
-
-.pre-footer p {
-  font-size: 16px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  line-height: 1.8;
-}
-.pre-footer i {
-  font-size: 15px;
-  margin-top: 3px;
-  color: #ffffff;
-}
-
-/* DESKRIPSI SOSIAL MEDIA */
-.pre-description {
-  font-size: 15px;
-  opacity: 0.9;
-  line-height: 1.7;
-  max-width: 260px;
-  margin-bottom: 18px;
-  text-align: left;
-}
-
-/* ICON SOSIAL MEDIA */
-.social-icons {
-  display: flex;
-  gap: 16px;
-}
-
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 18px;
-  transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: #f4d03f;
-  color: #8b6b4f;
-  border-color: #f4d03f;
-}
-
-/* PEMBATAS KE FOOTER */
-footer {
-  border-top: 1px solid rgba(255,255,255,0.3);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .pre-footer {
@@ -631,8 +649,8 @@ footer {
   <div>
     <a href="#beranda">Beranda</a>
     <a href="#profil">Profil</a>
-    <a href="#media">Media</a>
-    <a href="founder.html">Founder</a>
+    <a href="#koleksi">Koleksi</a>
+    <a href="founder.html" target="_blank">Founder</a>
     <a href="contact.html" target="_blank">Contact Us</a>
     <a href="login.html" id="authBtn" target="_blank">Login</a>
   </div>
@@ -695,44 +713,41 @@ footer {
   </div>
 </section>
       
-<section class="section youtube-section" id="media">
-  <div>
-    <h3>Video Dokumentasi</h3>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/4w13jP-cshM"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+<section class="koleksi-preview" id="koleksi">
+  <div class="container">
+    <h2>Koleksi Perpustakaan</h2>
+
+    <p class="koleksi-desc">
+      Temukan berbagai koleksi bacaan, referensi akademik, dan sumber informasi
+      yang telah dikurasi untuk mendukung kebutuhan literasi dan pembelajaran Anda.
+    </p>
+
+  <a href="koleksi.html" class="koleksi-btn" target="_blank">
+  Lihat Semua Koleksi
+</a>
   </div>
 </section>
-
-<footer>
-  <section class="pre-footer">
+<section class="pre-footer">
   <div class="pre-footer-container">
     
-    <!-- JAM OPERASIONAL -->
-   <div class="pre-col">
-  <h4>Jam Operasional</h4>
-  <p>Senin - Jumat: 08.00 - 16.00</p>
-  <p>Sabtu: 09.00 - 14.00</p>
-  <p>Minggu & Libur Nasional: Tutup</p>
-</div>
+    <div class="pre-col">
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat: 08.00 - 16.00</p>
+      <p>Sabtu: 09.00 - 14.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
 
-    <!-- KONTAK (TENGAH) -->
-    <div class="pre-col center-col">
+    <div class="pre-col">
       <h4>Kontak</h4>
       <p><i class="fas fa-envelope"></i> kontak@nlcorner.com</p>
       <p><i class="fas fa-phone"></i> (+62) 896 2075 6016</p>
       <p><i class="fas fa-map-marker-alt"></i> Sumatera Utara, Indonesia</p>
     </div>
 
-    <!-- SOSIAL MEDIA -->
     <div class="pre-col">
       <h4>Sosial Media</h4>
-      <p class="pre-description">
-        Ikuti Nazwa’s Library Corner untuk update literasi,
-        pengelolaan informasi, dan pengembangan
-        perpustakaan digital.
+      <p>
+        Ikuti Nazwa’s Library Corner untuk update literasi dan pengelolaan informasi.
       </p>
 
       <div class="social-icons">
@@ -744,9 +759,10 @@ footer {
 
   </div>
 </section>
-© 2026 Nazwa’s Library Corner 
-</footer>
 
+<footer>
+© 2026 Nazwa’s Library Corner
+</footer>  
 <!-- FIREBASE LOGIN DETECTOR -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
