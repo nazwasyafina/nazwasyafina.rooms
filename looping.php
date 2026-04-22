@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Belajar PHP</title>
+<title>Looping</title>
 
 <style>
 body {
