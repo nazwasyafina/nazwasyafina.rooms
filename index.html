@@ -77,6 +77,56 @@ nav a:hover{ color:#8b6b4f; }
   color:#ffffff;
 }
 
+body{
+  overflow-x:hidden;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* NAV LINKS WRAPPER */
+.nav-links{
+  display:flex;
+  align-items:center;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:100%;
+    background:#ffffff;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:20px;
+    gap:15px;
+
+    transform:translateY(-200%);
+    transition:0.3s;
+  }
+
+  .nav-links.active{
+    transform:translateY(0);
+  }
+
+  .nav-links a{
+    margin:0;
+    font-size:14px;
+  }
+}
 /* ===== SECTION UMUM ===== */
 .section{
   padding:100px 60px;
@@ -532,6 +582,38 @@ grid-template-columns:1fr;
 }
 }
 
+  /* KOLEKSI FIX MOBILE */
+@media (max-width:768px){
+
+  .koleksi-inner{
+    padding:0 15px;
+  }
+
+  .koleksi-intro{
+    padding:20px;
+  }
+
+  .koleksi-count .big{
+    font-size:50px;
+  }
+
+  .koleksi-bento{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .kb-card{
+    padding:16px;
+  }
+
+  .kb-name{
+    font-size:14px;
+  }
+
+  .kb-desc{
+    font-size:12px;
+  }
+}
 /* ═════════ INTRO KOLEKSI (STYLE BARU) ═════════ */
 
 .koleksi-intro{
@@ -968,66 +1050,132 @@ footer{
   border-top:1px solid rgba(255,255,255,0.3);
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px){
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width:768px){
 
+  /* ===== NAVBAR ===== */
   nav{
-    padding:15px 20px;
+    padding:0 20px;
   }
 
-  nav a{
-    margin-left:15px;
+  nav strong{
     font-size:14px;
   }
 
-  .section{
-    padding:70px 20px;
+  .logo-img{
+    height:50px;
+  }
+
+  nav div:last-child{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  nav a{
+    margin-left:12px;
+    font-size:13px;
+  }
+
+  #authBtn{
+    padding:6px 14px;
+    font-size:13px;
+  }
+
+  /* ===== BERANDA ===== */
+  #beranda{
+    padding-top:120px;
+    background-attachment:scroll;
   }
 
   .intro-wrapper h1{
-    font-size:28px;
+    font-size:26px;
   }
 
   .intro-wrapper p{
-    font-size:15px;
+    font-size:14px;
   }
 
+  /* SEARCH */
   .search-box{
     flex-direction:column;
-    align-items:center;
   }
 
   .search-box input{
     width:100%;
     border-radius:30px;
     margin-bottom:10px;
+    font-size:14px;
   }
 
   .search-box button{
     width:100%;
     border-radius:30px;
+    padding:12px;
   }
 
-  .profile-content{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
+  /* ===== PROFIL ===== */
+  .profile-left p{
+    font-size:14px;
   }
 
   .profile-right{
-    text-align:left;
-  }
-}
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .pre-footer {
-    padding: 50px 20px 40px;
+    margin-top:20px;
   }
 
-  .pre-footer-container {
-    flex-direction: column;
-    gap: 40px;
+  .profile-title{
+    font-size:28px;
   }
+
+  /* ===== LAYANAN ===== */
+  .layanan-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  /* ===== KOLEKSI (INI PALING PENTING) ===== */
+  /* ===== KOLEKSI MOBILE FIX TOTAL ===== */
+.koleksi-layout{
+  grid-template-columns:1fr;
+  gap:25px;
+}
+
+.koleksi-bento{
+  grid-template-columns:1fr 1fr; /* 2 kolom biar ga terlalu panjang */
+  gap:12px;
+}
+
+/* reset semua bento positioning biar ga aneh */
+.kb-card,
+.kb-card.featured{
+  grid-column:auto !important;
+  grid-row:auto !important;
+}
+
+/* featured jadi full width biar tetap standout */
+.kb-card.featured{
+  grid-column:1 / -1;
+}
+
+  /* ===== EVENT ===== */
+  .event-grid{
+    grid-template-columns:1fr;
+  }
+
+  .event-img{
+    height:150px;
+  }
+
+  /* ===== PRE FOOTER ===== */
+  .pre-footer{
+    padding:50px 25px;
+  }
+
+  .pre-footer-container{
+    flex-direction:column;
+    gap:30px;
+  }
+
 }
   /* ===== PREMIUM EDITORIAL STYLE PROFIL ===== */
 #profil{
@@ -1078,7 +1226,12 @@ footer{
   <img src="logo.PNG" alt="Logo" class="logo-img">
   <strong>Nazwa’s Library Corner</strong>
 </div>
-  <div>
+
+  <div class="menu-toggle" id="menuToggle">
+  <i class="fas fa-bars"></i>
+</div>
+
+<div class="nav-links" id="navLinks">
     <a href="index.html#beranda">Beranda</a>
     <a href="profil.html">Profil</a>
     <a href="koleksi.html">Koleksi</a>
@@ -1417,6 +1570,14 @@ onAuthStateChanged(auth, (user) => {
     };
   }
 });
+</script>
+      <script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
+
+toggle.onclick = () => {
+  nav.classList.toggle("active");
+};
 </script>
 </body>
 </html>
