@@ -1215,6 +1215,55 @@ footer{
   margin-top:90px;
   position:relative;
 }
+  /* DROPDOWN */
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  top:40px;
+  left:0;
+  background:#ffffff;
+  border:1px solid #e6d8c9;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  min-width:160px;
+  overflow:hidden;
+}
+
+.dropdown-menu a{
+  display:block;
+  padding:10px 15px;
+  margin:0;
+  font-size:14px;
+}
+
+.dropdown-menu a:hover{
+  background:#f2e5dc;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+/* LOGIN BUTTON KHUSUS */
+.login-btn{
+  margin-left:30px;
+  padding:8px 20px;
+  border-radius:25px;
+  border:2px solid #8b6b4f;
+  color:#8b6b4f !important;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.login-btn:hover{
+  background:#8b6b4f;
+  color:#fff !important;
+}
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -1237,9 +1286,16 @@ footer{
     <a href="koleksi.html">Koleksi</a>
     <a href="event.html">Events</a>
     <a href="contact.html">Contact Us</a>
+  <div class="dropdown">
+  <a href="#">PHP ▾</a>
+  <div class="dropdown-menu">
     <a href="https://nazwaslibrarycorner.great-site.net/looping.php">Looping</a>
     <a href="https://nazwaslibrarycorner.great-site.net/kalkulator.php">Kalkulator</a>
-    <a href="https://nazwaslibrarycorner.great-site.net/login.php">Login</a>
+    <a href="https://nazwaslibrarycorner.great-site.net/anggota.php">Anggota</a>
+  </div>
+</div>
+
+<a href="https://nazwaslibrarycorner.great-site.net/login.php" class="login-btn">Login</a>
   </div>
 </nav>
 
