@@ -1210,59 +1210,64 @@ footer{
   z-index:2;
 }
 
-/* Turunkan kanan + efek editorial */
+
 .profile-right{
   margin-top:90px;
   position:relative;
 }
-  /* DROPDOWN */
+/* DROPDOWN WRAPPER */
 .dropdown{
   position:relative;
 }
 
+/* LINK PHP */
+.dropdown > a{
+  display:inline-block;
+  padding:10px 0;
+}
+
+/* MENU */
 .dropdown-menu{
   display:none;
   position:absolute;
-  top:40px;
+  top:100%; 
   left:0;
+
   background:#ffffff;
   border:1px solid #e6d8c9;
   border-radius:10px;
   box-shadow:0 10px 20px rgba(0,0,0,0.08);
+
   min-width:160px;
-  overflow:hidden;
+  z-index:9999;
 }
 
+/* ITEM */
 .dropdown-menu a{
   display:block;
-  padding:10px 15px;
+  padding:12px 16px;
   margin:0;
-  font-size:14px;
 }
 
-.dropdown-menu a:hover{
-  background:#f2e5dc;
-}
-
-/* SHOW DROPDOWN */
+/* HOVER FIX */
 .dropdown:hover .dropdown-menu{
   display:block;
 }
-
-/* LOGIN BUTTON KHUSUS */
-.login-btn{
-  margin-left:30px;
-  padding:8px 20px;
-  border-radius:25px;
-  border:2px solid #8b6b4f;
-  color:#8b6b4f !important;
-  font-weight:600;
-  transition:0.3s;
+.dropdown-menu::before{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:0;
+  width:100%;
+  height:10px;
+}
+nav{
+  z-index:1000;
 }
 
-.login-btn:hover{
-  background:#8b6b4f;
-  color:#fff !important;
+.nav-links{
+  position:relative;
+  z-index:1001;
 }
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
